@@ -12,9 +12,9 @@ export const newEnvQuestions = [
         validate: async(apikey) => {
             if(apikey === "") return true;
 
-            if(!isValidKey(apikey, /^sk-[a-zA-Z0-9]{48}$/)) {
-                return validKeyErrorMessage
-            }
+            //if(!isValidKey(apikey, /^sk-[a-zA-Z0-9]{48}$/)) {
+            //    return validKeyErrorMessage
+            //}
 
             const endpoint = "https://api.openai.com/v1/models"
             const response = await fetch(endpoint, {
